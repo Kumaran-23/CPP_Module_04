@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:34:03 by snair             #+#    #+#             */
-/*   Updated: 2022/12/06 12:07:05 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/04 21:34:04 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Animal	&Animal::operator=(const Animal &animal)
 //makes a distinct sound depending on animal type, unknown animals make unknown sounds
 void	Animal::makeSound() const
 {
-	std::cout << "Unknown makes no noise" << std::endl;
+	std::cout << "Unknown noises in the distance" << std::endl;
 }
 
 //gets the value of _type attribute 

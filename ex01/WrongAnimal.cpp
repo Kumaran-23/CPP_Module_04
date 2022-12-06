@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:35:14 by snair             #+#    #+#             */
-/*   Updated: 2022/12/06 12:06:45 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/04 21:35:15 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ WrongAnimal	&WrongAnimal::operator=(const WrongAnimal &wa)
 //makes a distinct sound depending on WrongAnimal type, unknown WrongAnimals make unknown sounds
 void	WrongAnimal::makeSound() const
 {
-	std::cout << "WrongUnknown makes no noise" << std::endl;
+	std::cout << "WrongUnknown noises in the vacinity" << std::endl;
 }
 
 //gets the value of _type attribute 

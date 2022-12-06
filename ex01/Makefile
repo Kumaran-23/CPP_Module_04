@@ -1,8 +1,8 @@
 NAME = catDog
 SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp\
-	WrongCat.cpp main.cpp 
+	WrongCat.cpp Brain.cpp main.cpp 
 HEADER = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp\
-	WrongCat.hpp
+	WrongCat.hpp Brain.hpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
