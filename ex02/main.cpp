@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:35:05 by snair             #+#    #+#             */
-/*   Updated: 2022/12/06 16:51:05 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/17 18:22:20 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,6 @@ int main()
 		//delete (meta);
 		delete (j);
 		delete (i);
-	}
-	{
-		std::cout << "WrongAnimal Test" << std::endl;
-		const WrongAnimal* w_animal = new WrongAnimal();
-		const WrongAnimal* w_cat = new WrongCat();
-		std::cout << w_animal->getType() << std::endl;
-		std::cout << w_cat->getType() << std::endl;
-		w_animal->makeSound();
-		w_cat->makeSound();
-		delete (w_animal);
-		delete (w_cat);
 	}
 	{
 		std::cout << "\nTest from PDF\n" << std::endl;
@@ -73,6 +62,7 @@ int main()
 		c1.setCatIdea(0, "Where is my food peasant!!");
 		c1.setCatIdea(1, "Give me pats peasant");
 		Cat c2(c1);
+		c1.setCatIdea(99, "i want fish!");
 		std::cout << "c1 first idea : " << c1.getCatIdea(0) << std::endl;
 		std::cout << "C2 first idea : " << c2.getCatIdea(0) << std::endl;
 		std::cout << "c1 first address : " << &(c1.getCatIdea(0)) << std::endl;
@@ -81,9 +71,13 @@ int main()
 		std::cout << "C2 second idea : " << c2.getCatIdea(1) << std::endl;
 		std::cout << "c1 second address : " << &(c1.getCatIdea(1)) << std::endl;
 		std::cout << "C2 second address : " << &(c2.getCatIdea(1)) << std::endl;
+		std::cout << "c1 100th idea : " << c1.getCatIdea(99) << std::endl;
+		std::cout << "C2 100th idea : " << c2.getCatIdea(99) << std::endl;
+		std::cout << "c1 100th address : " << &(c1.getCatIdea(99)) << std::endl;
+		std::cout << "C2 100th address : " << &(c2.getCatIdea(99)) << std::endl;
 	}
 	{
-		std::cout << "\nCopy assignment operator test\n" << std::endl;
+		std::cout << "\nAssignment operator test\n" << std::endl;
 		Dog d1;
 		Dog d2;
 		

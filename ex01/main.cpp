@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:35:05 by snair             #+#    #+#             */
-/*   Updated: 2022/12/06 16:13:57 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/17 18:20:57 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,18 +55,34 @@ int main()
 		std::cout << "C2 second idea : " << c2.getCatIdea(1) << std::endl;
 		std::cout << "c1 second address : " << &(c1.getCatIdea(1)) << std::endl;
 		std::cout << "C2 second address : " << &(c2.getCatIdea(1)) << std::endl;
+		c1.setCatIdea(1, "i want fish!");
+		std::cout << "c1 second idea : " << c1.getCatIdea(1) << std::endl;
+		std::cout << "C2 second idea : " << c2.getCatIdea(1) << std::endl;
+		std::cout << "c1 second address : " << &(c1.getCatIdea(1)) << std::endl;
+		std::cout << "C2 second address : " << &(c2.getCatIdea(1)) << std::endl;
 	}
 	{
-		std::cout << "\nCopy assignment operator test\n" << std::endl;
+		std::cout << "\nassignment operator test\n" << std::endl;
 		Dog d1;
 		Dog d2;
 		
 		d1.setDogIdea(0, "Give me pats yo");
+		d1.setDogIdea(1, "i want meat!");
 		d2 = d1;
+		d1.setDogIdea(99, "lets go for a walk!");
+		d2.setDogIdea(99, "i want my ball!");
 		std::cout << "d1 first idea : " << d1.getDogIdea(0) << std::endl;
 		std::cout << "d2 first idea : " << d2.getDogIdea(0) << std::endl;
 		std::cout << "d1 first idea address : " << &(d1.getDogIdea(0)) << std::endl;
 		std::cout << "d2 first idea address : " << &(d2.getDogIdea(0)) << std::endl;
+		std::cout << "d1 second idea : " << d1.getDogIdea(1) << std::endl;
+		std::cout << "d2 second idea : " << d2.getDogIdea(1) << std::endl;
+		std::cout << "d1 second idea address : " << &(d1.getDogIdea(1)) << std::endl;
+		std::cout << "d2 second idea address : " << &(d2.getDogIdea(1)) << std::endl;
+		std::cout << "d1 100th idea : " << d1.getDogIdea(99) << std::endl;
+		std::cout << "d2 100th idea : " << d2.getDogIdea(99) << std::endl;
+		std::cout << "d1 100th idea address : " << &(d1.getDogIdea(99)) << std::endl;
+		std::cout << "d2 100th idea address : " << &(d2.getDogIdea(99)) << std::endl;
 	}
 	return (0);
 }
