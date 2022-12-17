@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:34:11 by snair             #+#    #+#             */
-/*   Updated: 2022/12/17 14:55:19 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/17 22:35:01 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Dog : public Animal
 		virtual ~Dog();
 		Dog		&operator=(const Dog &dog);
 		void	makeSound() const;
-		const std::string &getDogIdea(int i)const;
-		void setDogIdea(int i, std::string idea);
+		void	getDogIdea(int i)const;
+		void setDogIdea(std::string idea, int i);
 	private:
 		Brain *_brain;
 };

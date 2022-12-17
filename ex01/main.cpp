@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:35:05 by snair             #+#    #+#             */
-/*   Updated: 2022/12/17 18:20:57 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/17 23:01:33 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 int main()
 {
 	{
-		std::cout << "\nTest from PDF\n" << std::endl;
+		std::cout << "Test from PDF" << std::endl;
+		std::cout << std::endl;
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
 
@@ -26,7 +27,9 @@ int main()
 		delete i;
 	}
 	{
-		std::cout << "\nTest from PDF looping\n" << std::endl;
+		std::cout << std::endl;
+		std::cout << "Test from PDF looping" << std::endl;
+		std::cout << std::endl;
 		const Animal	*array_animals[10];
 
 		for (int i = 0; i < 5; i++)
@@ -42,47 +45,52 @@ int main()
 			delete array_animals[i];
 	}
 	{
-		std::cout << "\nDeep copy test\n" << std::endl;
-		Cat c1;
-		c1.setCatIdea(0, "Where is my food peasant!!");
-		c1.setCatIdea(1, "Give me pats peasant");
-		Cat c2(c1);
-		std::cout << "c1 first idea : " << c1.getCatIdea(0) << std::endl;
-		std::cout << "C2 first idea : " << c2.getCatIdea(0) << std::endl;
-		std::cout << "c1 first address : " << &(c1.getCatIdea(0)) << std::endl;
-		std::cout << "C2 first address : " << &(c2.getCatIdea(0)) << std::endl;
-		std::cout << "c1 second idea : " << c1.getCatIdea(1) << std::endl;
-		std::cout << "C2 second idea : " << c2.getCatIdea(1) << std::endl;
-		std::cout << "c1 second address : " << &(c1.getCatIdea(1)) << std::endl;
-		std::cout << "C2 second address : " << &(c2.getCatIdea(1)) << std::endl;
-		c1.setCatIdea(1, "i want fish!");
-		std::cout << "c1 second idea : " << c1.getCatIdea(1) << std::endl;
-		std::cout << "C2 second idea : " << c2.getCatIdea(1) << std::endl;
-		std::cout << "c1 second address : " << &(c1.getCatIdea(1)) << std::endl;
-		std::cout << "C2 second address : " << &(c2.getCatIdea(1)) << std::endl;
+		std::cout << std::endl;
+		std::cout << "Deep copy test" << std::endl;
+		std::cout << std::endl;
+		Cat *c1 = new Cat();
+		c1->setCatIdea("Where is my food peasant!!", 0);
+		c1->setCatIdea("Give me pats peasant", 1);
+		Cat *c2 = new Cat(*c1);
+		std::cout << "c1 ";
+		c1->getCatIdea(0);
+		std::cout << "c2 ";
+		c2->getCatIdea(0);
+		std::cout << "c1 ";
+		c1->getCatIdea(1);
+		std::cout << "c2 ";
+		c2->getCatIdea(1);
+		c1->setCatIdea("i want fish!", 1);
+		std::cout << "c1 ";
+		c1->getCatIdea(1);
+		std::cout << "c2 ";
+		c2->getCatIdea(1);
+		delete c1;
+		delete c2;
 	}
 	{
-		std::cout << "\nassignment operator test\n" << std::endl;
+		std::cout << std::endl;
+		std::cout << "assignment operator test" << std::endl;
+		std::cout << std::endl;
 		Dog d1;
 		Dog d2;
-		
-		d1.setDogIdea(0, "Give me pats yo");
-		d1.setDogIdea(1, "i want meat!");
+		d1.setDogIdea("Give me pats yo", 0);
+		d1.setDogIdea("i want meat!", 1);
 		d2 = d1;
-		d1.setDogIdea(99, "lets go for a walk!");
-		d2.setDogIdea(99, "i want my ball!");
-		std::cout << "d1 first idea : " << d1.getDogIdea(0) << std::endl;
-		std::cout << "d2 first idea : " << d2.getDogIdea(0) << std::endl;
-		std::cout << "d1 first idea address : " << &(d1.getDogIdea(0)) << std::endl;
-		std::cout << "d2 first idea address : " << &(d2.getDogIdea(0)) << std::endl;
-		std::cout << "d1 second idea : " << d1.getDogIdea(1) << std::endl;
-		std::cout << "d2 second idea : " << d2.getDogIdea(1) << std::endl;
-		std::cout << "d1 second idea address : " << &(d1.getDogIdea(1)) << std::endl;
-		std::cout << "d2 second idea address : " << &(d2.getDogIdea(1)) << std::endl;
-		std::cout << "d1 100th idea : " << d1.getDogIdea(99) << std::endl;
-		std::cout << "d2 100th idea : " << d2.getDogIdea(99) << std::endl;
-		std::cout << "d1 100th idea address : " << &(d1.getDogIdea(99)) << std::endl;
-		std::cout << "d2 100th idea address : " << &(d2.getDogIdea(99)) << std::endl;
+		d1.setDogIdea("lets go for a walk!", 99);
+		d2.setDogIdea("i want my ball!", 99);
+		std::cout << "d1 ";
+		d1.getDogIdea(0);
+		std::cout << "d2 ";
+		d2.getDogIdea(0);
+		std::cout << "d1 ";
+		d1.getDogIdea(1);
+		std::cout << "d2 ";
+		d2.getDogIdea(1);
+		std::cout << "d1 ";
+		d1.getDogIdea(99);
+		std::cout << "d2 ";
+		d2.getDogIdea(99);
 	}
 	return (0);
 }

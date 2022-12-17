@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:34:23 by snair             #+#    #+#             */
-/*   Updated: 2022/12/17 14:55:00 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/17 22:30:50 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Cat : public Animal
 		virtual ~Cat();
 		Cat		&operator=(const Cat &cat);
 		void	makeSound() const;
-		const std::string &getCatIdea(int i)const;
-		void setCatIdea(int i, std::string idea);
+		void 	getCatIdea(int i)const;
+		void 	setCatIdea(std::string idea, int i);
 	private:
 		Brain *_brain;
 };

@@ -43,7 +43,7 @@ const std::string	&Brain::getIdea(int i)const
 }
 
 //sets idea for current index of _idea
-void	Brain::setIdea(int i, std::string idea)
+void	Brain::setIdea(std::string idea, int i)
 {
 	if (i >= 100 || i < 0)
 		std::cout << "Brain is limited to 100 ideas and value cant be negative." << std::endl;

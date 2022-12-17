@@ -6,7 +6,7 @@
 /*   By: snair <snair@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 21:34:17 by snair             #+#    #+#             */
-/*   Updated: 2022/12/06 15:48:05 by snair            ###   ########.fr       */
+/*   Updated: 2022/12/17 22:45:00 by snair            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,14 @@ void	Dog::makeSound() const
 }
 
 //gets idea for the current index
-const std::string	&Dog::getDogIdea(int i)const
+void	Dog::getDogIdea(int i)const
 {
-	return (this->_brain->getIdea(i));
+	std::cout << "Idea number: " << i << " for dog is " << this->_brain->getIdea(i) 
+	<< " at the address: " << this->_brain->getIdeaAddress(i) << std::endl;
 }
 
 //sets idea for the current index
-void	Dog::setDogIdea(int i, std::string idea)
+void	Dog::setDogIdea(std::string idea, int i)
 {
-		this->_brain->setIdea(i, idea);
+		this->_brain->setIdea(idea, i);
 }

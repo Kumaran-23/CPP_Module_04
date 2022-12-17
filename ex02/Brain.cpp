@@ -34,18 +34,21 @@ Brain	&Brain::operator=(const Brain &brain)
 //gets value for current index of ideas
 const std::string	&Brain::getIdea(int i)const
 {
-	if (i > 100)
-        return(this->_ideas[0]);
+	if (i >= 100 || i < 0)
+	{
+		std::cout << "Brain is limited to 100 ideas and value cant be negative." << std::endl;
+		exit(1);
+	}
     return(this->_ideas[i]);        
 }
 
 //sets idea for current index of _idea
-void	Brain::setIdea(int i, std::string idea)
+void	Brain::setIdea(std::string idea, int i)
 {
-	if (i < 100)
-		this->_ideas[i] = idea;
+	if (i >= 100 || i < 0)
+		std::cout << "Brain is limited to 100 ideas and value cant be negative." << std::endl;
 	else
-		std::cout << "Brain is limited to 100 ideas." << std::endl;
+		this->_ideas[i] = idea;
 }
 
 //gets the address of current index of idea

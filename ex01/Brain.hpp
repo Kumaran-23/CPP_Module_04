@@ -14,7 +14,7 @@ class Brain
 			virtual ~Brain();
 			const std::string &getIdea(int i)const;
 			const std::string *getIdeaAddress(int i)const;
-			void setIdea(int i, std::string idea);
+			void setIdea(std::string idea, int i);
 	private:
 			std::string _ideas[100];
 };
